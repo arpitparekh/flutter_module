@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Card());
+  runApp(const CardApp());
 }
 
-class Card extends StatelessWidget {
-  const Card({Key? key}) : super(key: key);
+class CardApp extends StatelessWidget {
+  const CardApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.blue[500],
         appBar: AppBar(
@@ -19,7 +20,11 @@ class Card extends StatelessWidget {
         ),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 20,
+              ),
               const CircleAvatar(
                 radius: 60.0,
                 // backgroundColor: Colors.red,
@@ -43,12 +48,38 @@ class Card extends StatelessWidget {
                 fontFamily: "Noto"
                 ),
               ),
-              Row(
-                children: [
-                  Icon(Icons.phone),
-
-                ],
-              )
+              const SizedBox(
+                height: 10,
+              ),
+              Card(
+                margin: const EdgeInsets.only(left: 50,right: 50),
+                color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Row(
+                    children: const [
+                      Icon(Icons.phone),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text("+91 9601397062")
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Card(
+                margin: EdgeInsets.only(left: 50,right: 50),
+                color: Colors.white,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                  ),
+                  title: Text("+91 9601397062"),
+                ),
+              ),
             ],
           ),
         ),
