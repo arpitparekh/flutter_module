@@ -11,7 +11,7 @@ void main() {
         centerTitle: true,
         backgroundColor: Colors.blue[900],
       ),
-      body: DiceApplication(),
+      body: const DiceApplication(),
     ),
   ));
 }
@@ -46,7 +46,7 @@ class _DiceApplicationState extends State<DiceApplication> {
             borderRadius: BorderRadius.circular(15),
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             // mainAxisSize: MainAxisSize.min,
             children: [
               IconButton(
