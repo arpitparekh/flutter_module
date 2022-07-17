@@ -49,6 +49,9 @@ class CardApp extends StatelessWidget {
                 ),
               ),
               const SizedBox(
+                child: Divider(
+                  
+                ),
                 height: 10,
               ),
               Card(
